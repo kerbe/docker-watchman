@@ -24,7 +24,7 @@ COPY --from=builder /usr/local/lib/python2.7 /usr/local/lib/python2.7/
 COPY --from=builder /usr/local/var /usr/local/var
 COPY --from=builder /usr/local/share/doc /usr/local/share/doc
 
-RUN echo "node ALL=NOPASSWD: /usr/local/bin/npm" > /etc/sudoers.d/node
+RUN echo "node ALL=NOPASSWD: /usr/local/bin/npm,/usr/local/bin/yarn" > /etc/sudoers.d/node
 
 USER node
 
